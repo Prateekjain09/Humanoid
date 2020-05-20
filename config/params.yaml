@@ -1,0 +1,6 @@
+topic_target_velocity: /husky_velocity_controller/cmd_vel
+topic_current_position: odometry/filtered
+topic_setpoint: input_topic
+rate: 30
+iterations : 100   #while publishing setpoints
+
