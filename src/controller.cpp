@@ -2,6 +2,8 @@
 #include <std_msgs/String.h>
 #include <nav_msgs/Odometry.h>
 #include<geometry_msgs/Twist.h>
+#include<assignment_1/data.h>
+
 //#include<std_msgs/Vectors.h>
 using namespace std;
 float x,y,z;
@@ -22,10 +24,10 @@ float pid(float desired_value,float actual_value){
     integral_prior = integral;
    }
 //callback function which suscribes the target positions from the topic named-"input_topic"
-void input_callback(std::vector<_Float32> odom){
+void input_callback(assignment_1::data odom){
 
- (target_pos.pose.pose.position.x) = odom[i];
- (target_pos.pose.pose.position.y) = odom[i+1];
+ (target_pos.pose.pose.position.x) = odom.coordinates.data[i];
+ (target_pos.pose.pose.position.y) = odom.coordinates.data[i+1];
  
 return;
 }

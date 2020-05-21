@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
-   <node pkg="assignment_1" type="control" name="setpose_pub" output="screen"/>
-   <node pkg="assignment_1" type="control" name="feedback_controller" output="screen"/>
+   <node pkg="assignment_1" type="setpos_pub" name="setpos_pub" output="screen"/>
+   <node pkg="assignment_1" type="feedback_controller" name="feedback_controller" output="screen"/>
    <rosparam file="$(find assignment_1)/config/params.yaml" />
 
 </launch>
