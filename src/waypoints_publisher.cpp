@@ -10,6 +10,7 @@ ros::NodeHandle nh;
 std::string topic; double rate;int n;
 nh.getParam("input_topic", topic);
 nh.getParam("iterations",n);
+nh.getParam("rate",rate);
 ros::Publisher pub = nh.advertise<assignment_1::data>(topic,10);
 ros::Rate loopRate(rate);
 //vector<_Float32> point;
